@@ -1,7 +1,11 @@
 RAILS_GEM_VERSION = '2.3.11' unless defined? RAILS_GEM_VERSION
 
+require "rubygems"
+require "bundler/setup"
+
 require File.join(File.dirname(__FILE__), 'boot')
 require 'yaml' 
+
 
 config_file_path = File.join(RAILS_ROOT, *%w(config settings.yml))
 if File.exist?(config_file_path)
@@ -9,6 +13,7 @@ if File.exist?(config_file_path)
   APP_CONFIG = config.has_key?(RAILS_ENV) ? config[RAILS_ENV] : {}
 else
   puts "WARNING: configuration file #{config_file_path} not found." 
+  puts "AA." 
   APP_CONFIG = {}
 end
 
