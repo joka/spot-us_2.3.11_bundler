@@ -1,12 +1,15 @@
 development:
-  adapter: mysql
+  adapter: mysql2
   database: spotus_development
   username: root
   password:
+  socket: 
 
 test:
-  adapter: mysql
+  adapter: mysql2
   database: spotus_test
   username: root
   password:
+  socket: 
+
 
